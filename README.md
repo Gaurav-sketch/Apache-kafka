@@ -1,9 +1,19 @@
 # Apache-kafka
 <img src="https://miro.medium.com/max/1200/0*9DPCGOCmDvmSEa3H.png" width="100" height="100" />
 
-Working on live data , Gold rates.
+Working on live data , Gold rates.This project is to track real time Gold price.Creating barplots for all the real time Gold price consumed by consumer.
 Need to have two files - Producer and Consumer. 
 Send the data and receive the data.
+
+# Packages (Using Python)
+- time 
+- JSON
+- kafka
+- datetime
+- matplotlib
+- pandas
+- requests
+
 
 # Following commands are useful while working from command prompt
 
