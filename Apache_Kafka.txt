@@ -1,0 +1,71 @@
+Track real time Gold prices using Apache Kafka , Pandas and MatplotLib
+
+What is protocol ?
+A network protocol is an established set of rules that determine how data is transmitted between different devices in the same network. 
+Essentially, it allows connected devices to communicate with each other, regardless of any differences in their internal processes, structure or design.
+
+What is Apache Kafka ?
+-How company starts :
+-There is a source system and the target system
+-The source system and target system exchange the data 
+-Many source system and many target system , they have to exchnage data with each other 
+-4S and 6T , then need to write 24 Integrations 
+-Each Integration comes with difficulties around
+
+Protocol :The Protocol has to be decided -it could be :
+TCP - Transmission control Protocol  
+HTTP - Hypertext transfer protocol
+REST - Representational State Transfer
+FTP - File Transfer Protocol
+JDBC - Java Database Connectivity
+
+Data format: 
+How the data should be analyzed ?
+Binary,CSV,JSON,Avro 
+
+Data schema and evolution:
+How the data is shaped and may change.
+
+Whenever the source system connected to target system , there will be increased load from connection
+
+Kafka - A high throughput distributed messaging system.
+ 
+Learn to handle the real time data (Essential skill for Data Engineers and Data Scientist)
+Ingesting data into Spark, ingesting data into Hadoop, CQRS, replay messages, error recovery, and guaranteed distributed commit log for in-memory computing.
+
+# First create the local host :
+Start with zookeeper:
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+Start your kafka :
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+Command to create topic in kafka:
+.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic TestTopic
+
+list all the topics :
+.\bin\windows\kafka-topics.bat --list --zookeeper localhost:2181
+
+
+# Open the topic and send the message 
+.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic TestTopic 
+
+
+# Now check the consumer 
+.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic TestTopic --from-beginning
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
